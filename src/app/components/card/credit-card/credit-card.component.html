@@ -1,0 +1,98 @@
+<h2>Card component for credit card payments</h2>
+<h3>Radio Buttons visible</h3>
+<fieldset [formGroup]="cardFields" style="border: none">
+  <saf-radio-group
+    label="Pay with:"
+    name="creditCards"
+    orientation="vertical"
+    value=""
+    required="true"
+    invalid="false"
+    validation-message="Select a credit card to pay"
+  >
+    <saf-radio value="card-1" class="radio">
+      <saf-card
+        class="credit-card selected"
+        appearance="vertical"
+        heading-level="2"
+        image-bleed="true"
+        density="inherit"
+      >
+        <saf-badge slot="badge" appearance="info" attached="true">
+          <saf-icon
+            icon-name="triangle-exclamation"
+            appearance="solid"
+            presentation="false"
+            aria-label="Status"
+          ></saf-icon>
+          <span>Selected</span>
+        </saf-badge>
+
+        <!-- <div slot="eyebrow">Eyebrow header</div> -->
+
+        <div slot="heading">Amex xxxx</div>
+        <p class="expiration-date">11/2026</p>
+
+        <!-- <div slot="controls">
+  <saf-anchor href="https://www.reuters.com/" target="_blank"
+    >Link text</saf-anchor
+  >
+  <saf-button appearance="secondary">Label</saf-button>
+</div> -->
+      </saf-card>
+    </saf-radio>
+
+    <saf-radio value="card-2">
+      <saf-card
+        class="credit-card"
+        appearance="vertical"
+        heading-level="2"
+        image-bleed="true"
+        density="inherit"
+      >
+        <!-- <saf-badge slot="badge" appearance="info">
+    <saf-icon
+      icon-name="triangle-exclamation"
+      appearance="solid"
+      presentation="false"
+      aria-label="Status"
+    ></saf-icon>
+    <span>Selected</span>
+  </saf-badge> -->
+
+        <!-- <div slot="eyebrow">Eyebrow header</div> -->
+        <div slot="heading">Visa xxxx</div>
+        <p class="expiration-date">10/2029</p>
+
+        <!-- <div slot="controls">
+    <saf-anchor href="https://www.reuters.com/" target="_blank"
+      >Link text</saf-anchor
+    >
+    <saf-button appearance="secondary">Label</saf-button>
+  </div> -->
+      </saf-card>
+    </saf-radio>
+  </saf-radio-group>
+</fieldset>
+
+<!-- <h3>Radio buttons not visible</h3>
+<saf-radio-group
+  label="Label"
+  instructional-text="Instructional text"
+  name="fruits"
+  orientation="vertical"
+  value=""
+  invalid="false"
+  validation-message="Validation message"
+>
+  <saf-radio value="apples">
+    <div slot="heading">Visa xxxx</div>
+    <p class="cardholder">Robert Pattinson</p>
+    <p class="expiration-date">11/2026</p>
+  </saf-radio>
+  <saf-radio value="apples">
+    <div slot="heading">Visa xxxx</div>
+    <p class="cardholder">Robert Pattinson</p>
+    <p class="expiration-date">11/2026</p>
+  </saf-radio>
+</saf-radio-group> -->

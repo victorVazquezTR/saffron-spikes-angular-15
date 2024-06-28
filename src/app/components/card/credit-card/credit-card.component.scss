@@ -1,0 +1,29 @@
+saf-radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  flex-wrap: nowrap;
+
+  saf-radio,
+  saf-card {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    justify-items: center;
+    justify-items: baseline;
+  }
+
+  saf-radio::part(root) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  saf-radio {
+    // width: 500px;
+  }
+  saf-card {
+    min-width: 500px;
+    margin-bottom: var(--saf-space-inset-sm);
+  }
+}

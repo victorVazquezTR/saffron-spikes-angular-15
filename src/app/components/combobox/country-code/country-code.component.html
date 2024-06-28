@@ -1,0 +1,45 @@
+<h2>Combobox component for country Code</h2>
+<fieldset [formGroup]="phoneFields">
+  <saf-combobox
+    id="countryCode"
+    name="countryCode"
+    label="Country Code"
+    [invalid]="isCountryCodeInvalid"
+    [attr.aria-required]="isCountryCodeRequired"
+    validationMessage="'countryCodeValidationMessage | translate'"
+    combobox-aria-label="'PhoneComponent.CountryCode.Label' | translate"
+    [required]="isCountryCodeRequired"
+    required-message="Country code is required"
+    class="country-code"
+    formControlName="countryCode"
+    ngDefaultControl
+    data-qe-id="conf-Phone-countryCode"
+    density="standard"
+    autocomplete="both"
+    search-mode="includes"
+  >
+    <saf-listbox-option
+      [id]="countryCodeItem.countryId"
+      *ngFor="let countryCodeItem of countryCodeItemList"
+      data-qe-id="conf-address-country-code-options"
+      class="country-code-option"
+    >
+      (+{{ countryCodeItem.phoneCode }}) {{ countryCodeItem.name }}
+    </saf-listbox-option>
+  </saf-combobox>
+  <saf-text-field
+    id="extension"
+    name="extension"
+    label="Extension"
+    maxlength="6"
+    density="standard"
+    formControlName="extension"
+    confirmationOnlyNumbers
+    data-qe-id="conf-phone-extension"
+    type="text"
+    input-mode="tel"
+    ngDefaultControl
+    (blur)="getAllData()"
+  >
+  </saf-text-field>
+</fieldset>
